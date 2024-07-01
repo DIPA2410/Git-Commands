@@ -1,0 +1,36 @@
+1. git add .
+   git commit -m "Add detailed description of changes made"
+
+2. git checkout correct-branch
+   git cherry-pick commit-hash
+   git checkout wrong-branch
+   git reset --hard HEAD~n  # Replace n with the number of commits you want to remove
+
+3. git checkout -b new-branch-name
+   git add .
+   git commit -m "Add detailed description of changes made"
+   git push origin new-branch-name
+
+4. git clone https://github.com/your-username/repo-name.git
+   cd repo-name
+   git checkout -b new-feature-branch
+   git add .
+   git commit -m "Add description of changes made"
+   git push origin new-feature-branch
+
+5. git fetch origin
+   git merge origin/main
+   git add .
+   git commit -m "Resolve merge conflicts"
+
+6. git fetch origin
+   git checkout main
+   git pull origin main
+   git checkout -b new-feature-branch
+
+7. git reset --hard commit-hash
+
+8. git log -- path/to/deleted-file
+   git checkout commit-hash -- path/to/deleted-file
+   git add path/to/deleted-file
+   git commit -m "Restore deleted file"
